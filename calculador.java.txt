@@ -1,0 +1,57 @@
+public class Main
+{
+    public static void main(String[] args) {
+        Calculadora calc = new Calculadora();
+        System.out.println(calc.fat(-5));
+       
+	}
+    
+}
+____________________________________________________________
+public class Calculadora
+{
+    public double som(double a, double b){
+        double result = a + b;
+        return result;
+    }
+    public double sub(double a, double b){
+        double result = a - b;
+        return result;
+    }
+    public double div(double a, double b){
+        double result = a / b;
+        return result;
+    }
+    public double mult(double a, double b){
+        double result = a * b;
+        return result;
+    }
+    public double elev(int a, int b){
+        int u = 1;
+        double result = 1;
+        if (b < 0){
+            for (int x = 0; x>b ;x-- ){
+                u = u * a; 
+            } 
+            result = result/u;
+        } else {
+            for (int x = 0; x<b ;x++ ){
+                u = u * a;
+            } 
+            result = result*u;
+        }
+        return result;
+    }
+    public int fat(int a){
+        if (a < 0){
+            System.out.print("Não existe fatorial de negativ");
+        } else {
+            int result = 1;
+            for (int x = a; x > 0 ;x--){
+                result = result * x;
+            }
+            return result;
+        }    
+        return 0;
+    }
+}
